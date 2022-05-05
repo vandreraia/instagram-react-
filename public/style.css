@@ -96,6 +96,8 @@ main{
 .stories-icons{
     margin: 15px 8px;
     position: relative;
+    
+    text-overflow: ellipsis;
 }
 
 .stories-background{
@@ -214,7 +216,7 @@ main{
 
 .add-coment input{
     margin: 10px;
-    border: 0;x'
+    border: 0;
     width: 30vw;
     min-width: 300px;
 }

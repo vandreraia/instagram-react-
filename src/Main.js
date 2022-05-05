@@ -1,73 +1,22 @@
 import Stories from "./Stories"
+import Sugestoes from "./Sugestoes"
+import User from "./User"
 
 export default function Main() {
+    const itens = ["Imgs/badvibesmemes 1.png", "Imgs/chibirdart 1.png", "Imgs/razoesparaacreditar 1.png", "Imgs/adorableanimals 1.png", "Imgs/smallcutecats 1.png"]
+    const user = ["Imgs/catanacomics 1.png"]
     return (
         <main>
             <Stories />
             <div>
                 <div class="sidebar">
-                    <div class="sidebar-topo">
-                        <img class="img-sidebar-topo" src="Imgs/catanacomics 1.png" />
-                        <div class="sidebar-span">
-                            <span class="weight-500">catanacomics</span>
-                            <span class="weight-300 lightgray">Catana</span>
-                        </div>
-                    </div>
+                    <User src={user} txt={user.slice(5,-6)} nick={user.slice(5,-8)} />
                     <div class="sugestoes">
                         <div class="sugestoes-box">
                             <p class="weight-500 ppsmol lightgray">Sugestões para você</p>
                             <p class="weight-500 ppsmol">Ver tudo</p>
                         </div>
-                        <div class="sugestoes-box">
-                            <div class="sugestoes-box-inside">
-                                <img src="Imgs/badvibesmemes 1.png" />
-                                <div class="sugestoes-box-inside-name">
-                                    <p class="weight-500">bad.vibes.memes</p>
-                                    <p class="ppsmol lightgray">Segue você</p>
-                                </div>
-                            </div>
-                            <p class="weight-500 ppsmol blue">Seguir</p>
-                        </div>
-                        <div class="sugestoes-box">
-                            <div class="sugestoes-box-inside">
-                                <img src="Imgs/chibirdart 1.png" />
-                                <div class="sugestoes-box-inside-name">
-                                    <p class="weight-500">chibirdart</p>
-                                    <p class="ppsmol lightgray">Segue você</p>
-                                </div>
-                            </div>
-                            <p class="weight-500 ppsmol blue">Seguir</p>
-                        </div>
-                        <div class="sugestoes-box">
-                            <div class="sugestoes-box-inside">
-                                <img src="Imgs/razoesparaacreditar 1.png" />
-                                <div class="sugestoes-box-inside-name">
-                                    <p class="weight-500">razoesparaacreditar</p>
-                                    <p class="ppsmol lightgray">Segue você</p>
-                                </div>
-                            </div>
-                            <p class="weight-500 ppsmol blue">Seguir</p>
-                        </div>
-                        <div class="sugestoes-box">
-                            <div class="sugestoes-box-inside">
-                                <img src="Imgs/adorableanimals 1.png" />
-                                <div class="sugestoes-box-inside-name">
-                                    <p class="weight-500">adorableanimals</p>
-                                    <p class="ppsmol lightgray">Segue você</p>
-                                </div>
-                            </div>
-                            <p class="weight-500 ppsmol blue">Seguir</p>
-                        </div>
-                        <div class="sugestoes-box">
-                            <div class="sugestoes-box-inside">
-                                <img src="Imgs/smallcutecats 1.png" />
-                                <div class="sugestoes-box-inside-name">
-                                    <p class="weight-500">smallcutecats</p>
-                                    <p class="ppsmol lightgray">Segue você</p>
-                                </div>
-                            </div>
-                            <p class="weight-500 ppsmol blue">Seguir</p>
-                        </div>
+                        {itens.map(item => <Sugestoes src={item} txt={item.slice(5, -6)}/>)}
                     </div>
                     <div>
                         <p class="fontsize-11 lightergray">Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade •
