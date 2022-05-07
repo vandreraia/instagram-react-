@@ -306,6 +306,10 @@ span{
     font-size: 14px;
 }
 
+.red {
+    color: red;
+}
+
 @media screen and (max-width: 935px) {
 	.sidebar{
 		display: none;

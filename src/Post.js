@@ -1,4 +1,13 @@
+import React from 'react';
+
 export default function Post(props) {
+    const [liked, setLiked] = React.useState("");
+    function isLiked() {
+        !liked ? setLiked("red") : setLiked("");
+    }
+    function isLikedImg() {
+        setLiked("red");
+    }
     return (
         <div class="posts border">
             <div class="post-header">
@@ -8,16 +17,16 @@ export default function Post(props) {
                 </div>
                 <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
             </div>
-            <img src={props.img} />
+            <img onClick={() => isLiked()} src={props.img} />
             <div>
-                <ion-icon name="heart-outline"></ion-icon>
+                <ion-icon onClick={() => isLiked()} class={liked} name="heart"></ion-icon>
                 <ion-icon name="chatbubble-outline"></ion-icon>
                 <ion-icon name="paper-plane-outline"></ion-icon>
                 <ion-icon class="post-bottom-right" name="bookmark-outline"></ion-icon>
             </div>
             <div class="post-bottom-like">
                 <img src="Imgs/respondeai.png" />
-                <p>Curtido por <b>respondeai</b> e <b>outras 101.523 pessoas</b></p>
+                <p>Curtido por <b class={liked}>respondeai</b> e <b>outras 101.523 pessoas</b></p>
             </div>
             <div class="coments">
                 <div class="coment">
