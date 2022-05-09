@@ -300,6 +300,7 @@ main{
 }
 ion-icon{
     font-size: 30px;
+    visibility: visible;
 }
 
 span{
@@ -308,6 +309,7 @@ span{
 
 .red {
     color: red;
+    visibility: visible;
 }
 
 @media screen and (max-width: 935px) {
